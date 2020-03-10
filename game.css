@@ -1,0 +1,229 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    
+}
+g-content {
+    display: flex;
+    background-color: gray; 
+    
+    
+
+    width: 100vw;
+    height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+}
+
+g-presentation {
+    display: block;
+    background-color: #fff;
+    
+    width: 90vmin;
+    height: 90vmin;
+
+    border: .2em solid #000;
+    border-radius: 1em;
+}
+
+g-presentation>g-slide {
+    display: none;
+}
+
+g-presentation>g-slide.active {
+    display: flex;
+}
+
+g-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+
+    
+
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+
+    font-size: 8vmin;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    
+}
+
+
+g-chooser {
+    display: flex;
+    width: 100%;
+    height: 40vmin;
+
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+g-chooser.fixed {
+    height: auto;
+}
+
+g-chooser * {
+     /* max-width: 25%; */
+      
+     
+     
+
+     /* margin: 5% 2.5%;  */
+}
+
+g-chooser.chosen>*.chosen {
+    max-width: 30%;
+    
+    
+}
+
+g-chooser.fixed>*.chosen {
+    max-width: 50%;
+    animation-name: chosen_fixed;
+    animation-duration: .5s;
+    
+    
+}
+
+@keyframes chosen_fixed {
+    from {
+        max-width: 30%;
+    }
+    to {
+        max-width: 50%;
+    }
+}
+
+g-chooser.chosen>animate*.chosen{   
+    animation-name: chosen;
+    animation-duration: .5s;
+    animation-timing-function: ease;
+    
+
+}
+
+@keyframes chosen {
+    from {
+        max-width: 20%;
+    }
+
+    to {
+        max-width: 30%;
+    }
+}
+
+g-chooser.chosen>*:not(.chosen) {
+    max-width: 16.6%;
+    opacity: .25;
+}
+
+g-chooser.fixed>*:not(.chosen) {
+    max-width: 0%;
+    opacity: .25;
+    
+    animation-name: unchosen_fixed;
+    animation-duration: 0s;
+    
+}
+
+@keyframes unchosen_fixed {
+    from {
+        max-width: 16.6;
+    }
+    to {
+        max-width: 0%;
+    }
+}
+
+g-chooser.chosen>*:not(.chosen) {
+    animation-name: unchosen;
+    animation-duration: .5s; 
+    animation-timing-function: linear;
+    
+}
+
+@keyframes unchosen {
+    from {
+        max-width: 20%;
+        opacity: 1.0;
+    }
+
+    to {
+        max-width: 16.6%;
+        opacity: .25;
+    }
+}
+
+ g-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* transition: transform .2s; */
+}
+
+
+ g-frame img {
+    width: 225px;
+    height: 200px;
+    /* object-fit: fill; 
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;  */
+    
+} 
+g-frame:hover {
+    transform: scale(1.25);
+} 
+
+g-final {
+    width: 100%;
+     height: auto; 
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  
+  g-final img {
+    max-width: 50%;
+    /* max-height: 300px;   */
+    /* margin-top: 20%;  */
+    transition-property: margin;
+    transition-duration: .5s;
+  }
+
+   /* g-final.match img {
+      margin-top: 5%;
+      margin-left: 14%;
+        
+  }  */
+  
+ 
+
+  #tfo g-title {
+      opacity: 0;
+      animation-name: tfo;
+      animation-duration: 2s;
+  }
+
+  @keyframes tfo {
+      from {
+          opacity: 1.0;
+      }
+      to {
+          opacity: 0;
+      }
+  }
+  
