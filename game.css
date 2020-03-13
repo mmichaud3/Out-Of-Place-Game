@@ -182,6 +182,28 @@ g-chooser.chosen>*:not(.chosen) {
     min-height: 100%;  */
     
 } 
+g-wrongframe:hover {
+    transform: scale(1.25);
+} 
+
+g-wrongframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* transition: transform .2s; */
+}
+
+
+ g-wrongframe img {
+    width: 225px;
+    height: 200px;
+    /* object-fit: fill; 
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;  */
+    
+} 
 g-frame:hover {
     transform: scale(1.25);
 } 
