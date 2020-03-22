@@ -26,7 +26,7 @@ function correctSlide(slide) {
     var next = document.querySelector(slide);
     current.classList.remove('active');
     next.classList.add('active');
-    setTimeout(function () {newSlide()},3000);
+    // setTimeout(function () {newSlide()},3000);
     
 }
 
@@ -37,21 +37,28 @@ function goBack(slide) {
     next.classList.add('active');
 }
 
-function newSlide(){
-    let current = document.querySelector('g-slide.active');
-    // let wrong = document.querySelector('g-slide.wrong')
-    if (current.className = 'g-slide.correct' ) {
-        let next = document.querySelector('g-slide.secondSlide');
-        current.classList.remove('active');
-        next.classList.add('active');
-     } 
-     else if (current.className = 'g-slide.correctTwo')  {
-        // current = document.querySelector('g-slide.wrong');
-        let next = document.querySelector('g-slide.thirdSlide');
-        current.classList.remove('active');
-        next.classList.add('active');
-     }
-    };
+function nextSlide(slide) {
+    var current = document.querySelector('g-slide.active');
+    var next = document.querySelector(slide); //passes in slide from nextSlide button
+    current.classList.remove('active');
+    next.classList.add('active');
+}
+
+// function newSlide(slide){
+//     let current = document.querySelector('g-slide.active');
+//     let wrong = document.querySelector('g-slide.wrong')
+//     if (current.className = 'g-slide.correct' ) {
+//         let next = document.querySelector('g-slide.secondSlide');
+//         current.classList.remove('active');
+//         next.classList.add('active');
+//      } 
+//      else if (current.className = 'g-slide.correctTwo')  {
+//         current = document.querySelector('g-slide.wrong');
+//         let next = document.querySelector('g-slide.thirdSlide');
+//         current.classList.remove('active');
+//         next.classList.add('active');
+//      }
+//     };
 
 
 
