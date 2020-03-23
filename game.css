@@ -91,14 +91,6 @@ g-chooser.fixed {
     height: auto;
 }
 
-g-chooser * {
-     /* max-width: 25%; */
-      
-     
-     
-
-     /* margin: 5% 2.5%;  */
-}
 
 g-chooser.chosen>*.chosen {
     max-width: 30%;
@@ -270,4 +262,30 @@ g-final {
           opacity: 0;
       }
   }
+
+  @media only screen and (max-width: 700px) {
+    g-frame img {
+        width: 125px;
+        height: 100px;
+    }
+    g-frame img:hover {
+        transform: scale(1.25);
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    g-chooser img {
+        width: 125px;
+        height: 100px;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+      button {
+        margin-left: 50px;
+        margin-right: 50px;
+        background-color: lightgrey;
+    } 
+  }
+  
   
