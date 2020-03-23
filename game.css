@@ -234,7 +234,7 @@ g-final {
   
   g-final img {
     max-width: 50%;
-    /* max-height: 300px;   */
+     max-height: 300px;   
     /* margin-top: 20%;  */
     transition-property: margin;
     transition-duration: .5s;
@@ -287,5 +287,11 @@ g-final {
         background-color: lightgrey;
     } 
   }
+
+  @media only screen and (max-width: 700px) {
+    g-final img {
+      max-height: 150px;
+  } 
+}
   
   
